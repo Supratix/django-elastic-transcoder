@@ -1,6 +1,6 @@
-from django.dispatch import Signal
-
-transcode_onprogress = Signal(providing_args=["job", "message"])
-transcode_onerror = Signal(providing_args=["job", "message"])
-transcode_oncomplete = Signal(providing_args=["job", "message"])
-transcode_onwarning = Signal(providing_args=["job", "message"])
+import django.dispatch
+#(providing_args=["job", "message"]
+transcode_onprogress = django.dispatch.Signal()
+transcode_onerror = django.dispatch.Signal()
+transcode_oncomplete = django.dispatch.Signal()
+transcode_onwarning = django.dispatch.Signal()
